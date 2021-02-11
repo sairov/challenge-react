@@ -46,7 +46,7 @@ const DataPicker = ({actualValue, finalValue, min, max, step, title, type}) => {
     <section className="container">  
     <div className="flex">
         <h3>{title}</h3>
-         <input type="number" value={currentValue.value}  
+        <input type="number" value={currentValue.value}  
         onChange={onInputChange} 
         onBlur={manualInput}  
         />
@@ -66,16 +66,27 @@ const DataPicker = ({actualValue, finalValue, min, max, step, title, type}) => {
     height: "18px"
     }}
     />
-    <div className="flex content"> 
-        <NumberFormat value={min} displayType={'text'} 
-        thousandSeparator={'.'} 
-        decimalSeparator={','} 
-        prefix={'$ '} />
-        <NumberFormat value={max} displayType={'text'} 
-        thousandSeparator={'.'} 
-        decimalSeparator={','} 
-        prefix={'$ '} />
+     <div className="flex content">
+     { type === " amount"
+     ?  <>
+            <NumberFormat value={min} displayType={'text'} 
+            thousandSeparator={'.'} 
+            decimalSeparator={','} 
+            prefix={'$ '} />
+            <NumberFormat value={max} displayType={'text'} 
+            thousandSeparator={'.'} 
+            decimalSeparator={','} 
+            prefix={'$ '} />
+        </>
+        :
+        <>
+            <p>{min}</p>
+            <p>{max}</p>
+        </>
+    }
     </div>
+    
+    
 </section> );
 }
  

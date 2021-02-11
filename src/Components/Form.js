@@ -22,42 +22,41 @@ const Form = () => {
 
     return ( 
         <main>
-            <form action="POST">
-            <DataPicker 
-                actualValue={currentAmount.amount}
-                finalValue={setCurrentAmount}
-                min={MIN_AMOUNT}
-                max={MAX_AMOUNT}
-                step={LARGES_STEPS}
-                title={"Monto Solicitado"}
-                type={"amount"}
-            />
-            <DataPicker 
-                actualValue={quantityDues.dues}
-                finalValue={setQuantityDues}
-                min={MIN_DUES}
-                max={MAX_DUES}
-                step={SOFT_STEPS}
-                title={"Plazo"}
-                type={"dues"}
-            />
-            <Result 
-                amount={currentAmount.amount}
-                dues={quantityDues.dues}
-                // result={resultValue.result}
-            />
-            <div className="flex buttons">
-                <Button 
-                    text={"OBTENER CRÉDITO"}
-                    styleOfButton={"agree"}
-                    onSubmit={e => {e.preventDefault()}}
+            <form method="POST" action="#">
+                <DataPicker 
+                    actualValue={currentAmount.amount}
+                    finalValue={setCurrentAmount}
+                    min={MIN_AMOUNT}
+                    max={MAX_AMOUNT}
+                    step={LARGES_STEPS}
+                    title={"Monto Solicitado"}
+                    type={"amount"}
                 />
-                <Button 
-                    text={"VER DETALLE DE LAS CUOTAS"}
-                    styleOfButton={"seeFull"}
-                    onSubmit={e => {e.preventDefault()}}
+                <DataPicker 
+                    actualValue={quantityDues.dues}
+                    finalValue={setQuantityDues}
+                    min={MIN_DUES}
+                    max={MAX_DUES}
+                    step={SOFT_STEPS}
+                    title={"Plazo"}
+                    type={"dues"}
                 />
-            </div>
+                <Result 
+                    amount={currentAmount.amount}
+                    dues={quantityDues.dues}
+                />
+                <div className="flex buttons">
+                    <Button 
+                        text={"OBTENER CRÉDITO"}
+                        styleOfButton={"agree"}
+                        onSubmit={e => {e.preventDefault()}}
+                    />
+                    <Button 
+                        text={"VER DETALLE DE LAS CUOTAS"}
+                        styleOfButton={"seeFull"}
+                        onSubmit={e => {e.preventDefault()}}
+                    />
+                </div>
             </form>
         </main>
      );
