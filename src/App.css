@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --indigo-dye: #003b67;
+  --usafa-blue: #084f85;
+  --white: #fffffe;
+  --zomp: #17aa8d;
+  --usafa-blue-2: #0b548b;
+  --prussian-blue: #00355d;
+  --font-sm: 0.8rem;
+  --font-md: 1rem;
+  --font-lg: 1.5rem;
+  --font-xl: 2rem;
+  --font-2xl: 2.5rem;
+}
+
+* {
+  font-size: 14px;
+}
+
+.App {
+  text-align: center;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--indigo-dye);
+}
+.App h1 {
+  font-size: var(--font-xl);
+}
+
+body {
+  background-color: var(--usafa-blue);
+  color: var(--white);
+  font-family: "Montserrat", sans-serif;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media screen and (min-width: 369px) {
+  .App {
+    padding: 5rem;
+    max-width: 70%;
+  }
+}
+
+@media screen and (min-width: 790px) {
+  .App {
+    max-width: 40%;
+  }
+}

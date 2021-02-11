@@ -1,0 +1,31 @@
+.container {
+  background-color: var(--indigo-dye);
+  margin: 2rem 0;
+}
+
+.container h3 {
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+
+.container input {
+  padding: 0.5rem;
+  width: 100px;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid var(--white);
+  color: var(--white);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.slider {
+  margin: 1rem auto;
+  width: 90%;
+}

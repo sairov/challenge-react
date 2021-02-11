@@ -1,0 +1,29 @@
+button {
+  padding: 1rem 1.2rem;
+  border: none;
+  font-weight: 400;
+  height: 60px;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.agree {
+  background-color: var(--zomp);
+  font-size: var(--font-md);
+  flex-grow: 2;
+}
+
+.seeFull {
+  background-color: var(--usafa-blue-2);
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 369px) {
+  .agree {
+    height: auto;
+  }
+
+  button {
+    width: 100%;
+  }
+}

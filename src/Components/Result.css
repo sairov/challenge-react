@@ -1,0 +1,25 @@
+.result {
+  background-color: var(--prussian-blue);
+  justify-content: space-around;
+  padding: 0.7rem;
+}
+
+.result_input {
+  font-size: var(--font-2xl);
+  font-weight: bold;
+}
+
+@media screen and (max-width: 369px) {
+  .result_input {
+    font-size: var(--font-sm);
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .result {
+    flex-direction: column;
+  }
+  .result_input {
+    font-size: var(--font-lg);
+  }
+}
