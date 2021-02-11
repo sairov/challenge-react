@@ -14,6 +14,8 @@ src/
             |- Button.js _____________________________________ # Componente de botones para el submit de la información
 ```
 
+[live demo](https://react-challenge-pmr.netlify.app)
+
 ## Ejercicio
 
 ### Diseño
