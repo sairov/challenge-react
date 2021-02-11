@@ -67,7 +67,7 @@ const DataPicker = ({actualValue, finalValue, min, max, step, title, type}) => {
     }}
     />
      <div className="flex content">
-     { type === " amount"
+     { type === "amount"
      ?  <>
             <NumberFormat value={min} displayType={'text'} 
             thousandSeparator={'.'} 
